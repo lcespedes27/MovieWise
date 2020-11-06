@@ -1,0 +1,5 @@
+.Nav{
+  display: flex;
+  border: solid 1px black;  
+  justify-content: space-between;
+}

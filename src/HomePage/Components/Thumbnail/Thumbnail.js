@@ -4,10 +4,11 @@ import './Thumbnail.css';
 
 const Thumbnail = (props)=>{
     
+   
 
     return(
 
-        <img className='Thumbnail' src={props.posterUrl} alt={props.title} height={props.height} width={props.width}/>
+        <img className='Thumbnail' src={props.posterUrl} alt={props.title} title={props.title} width={props.width} onClick={props.clicked}/>
 
     );
 

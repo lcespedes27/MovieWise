@@ -1,0 +1,16 @@
+.items{
+    border: solid black 1px;
+    height: auto;
+    display: flex;
+    position: relative;
+    background-color: white;
+    z-index: 500;
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 5px;
+
+}
+.itemsPoster{
+    width: 150px;
+   
+}

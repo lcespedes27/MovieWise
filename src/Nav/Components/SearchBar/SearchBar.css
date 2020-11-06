@@ -1,0 +1,18 @@
+.searchBarContainer{
+    width: 50%;
+}
+
+.searchBar{
+    width: 80%;
+}
+
+.searchList{
+
+  
+    margin-top: 10px;
+  max-height: 600px;
+  overflow-x: visible;
+  overflow-y: scroll;
+
+  margin-left: 20%;
+}

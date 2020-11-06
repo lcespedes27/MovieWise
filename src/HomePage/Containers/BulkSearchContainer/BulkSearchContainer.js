@@ -4,74 +4,137 @@ import './BulkSearchContainer.css'
 import Thumbnail from '../../Components/Thumbnail/Thumbnail'
 
 class BulkSearchContainer extends Component{
-
+    
     state={
-    genre:null,
-    data:[]
+    genre:28,
+    genrePage:1,
+    data:[],
+    trends:"movie",
+    movieId:null,
+    page:1
+    
     }
-
+ 
     searchHandler=(event)=>{
         
-        this.setState({genre: event.currentTarget.value},() => { 
-            this.componentDidMount()
-    })
-};
+        if (this.props.type==="1"){
+
+            this.setState({genre: event.currentTarget.value,page:1},() => { 
+                this.componentDidMount()
+            })
+        }else{
+
+            this.setState({trends: event.currentTarget.value,page:1},() => { 
+                this.componentDidMount()
+            })
+        }
+    };
+
+    sendMovieID=()=>{
+
+           
+            this.props.clicked(this.state.movieId)
+
+    
+        
+
+    };
 
 componentDidMount(){
     
     
-    axios.get('https://api.themoviedb.org/3/discover/movie?api_key=c839ad42a3cfdcc2a0e0e0ba427bde96&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres='+this.state.genre)
+    if(this.props.type ==="1"){
+    axios.get(this.props.endpoint+this.state.genre+"&page="+this.state.page)
          .then( response => {
               // handle success
               this.setState({data:response.data.results})
-              //const url ="https://image.tmdb.org/t/p/w500"+ response.data.results[0].poster_path
-
-              console.log(response.data.results);
-              console.log(this.state.data);
-              //console.log(url);
+              
           }
-  )
-  
-  }
+  )}else if(this.props.type ==="2"){
+
+    axios.get(this.props.endpoint+this.state.trends+'/week?api_key=c839ad42a3cfdcc2a0e0e0ba427bde96')
+    .then( response => {
+         // handle success
+         this.setState({data:response.data.results})
+         
 
 
+     })
 
+    }
+}
+    next=()=>{
+        this.setState({page:this.state.page+1},()=>{this.componentDidMount()})
+    }
+
+    back=()=>{
+        if(this.state.page > 1)
+            this.setState({page:this.state.page-1},()=>{this.componentDidMount()});
+    }
+    
     render(){
-        
-        const dropList = (
-            <div>
-            <label for="genres">Genres:</label>
-            <select id="list" name="genres" onChange={this.searchHandler}>
-                <option value="28" >Action</option>
-                <option value="16" >Animation</option>
-                <option value="35 ">Comedy </option>
-                <option value="80" >Crime</option>
-                <option value="99" >Documentary</option>
-                <option value="18" >Drama</option>
-                <option value="10751">Family</option>
-                <option value="14" >Fantasy</option>
-                <option value="27" >Horror </option>
-                <option value="10749" >Romance</option>
-                <option value="878" >Science Fiction</option>
-                <option value="53" >Thriller</option>
-                <option value="37" >Western</option>
-            </select>
-            </div>
-        )
+       
 
+        if(this.props.show){
+        let dropList;
+          if(this.props.type==="1"){
+             dropList = (
+                <div>
+                <p>Genres:</p>
+                <select id="listGenre" name="genres" onChange={this.searchHandler}>
+                    <option value="28" >Action</option>
+                    <option value="16" >Animation</option>
+                    <option value="35 ">Comedy </option>
+                    <option value="80" >Crime</option>
+                    <option value="99" >Documentary</option>
+                    <option value="18" >Drama</option>
+                    <option value="10751">Family</option>
+                    <option value="14" >Fantasy</option>
+                    <option value="27" >Horror </option>
+                    <option value="10749" >Romance</option>
+                    <option value="878" >Science Fiction</option>
+                    <option value="53" >Thriller</option>
+                    <option value="37" >Western</option>
+                </select>
+                </div>
+        )}else if(this.props.type==="2"){
+
+             dropList = (
+            
+                <div>
+                <p>Trending:</p>
+                <select id="listTrends" name="trends" onChange={this.searchHandler}>
+                    <option value="movie" >Movies</option>
+                    <option value="tv" >TV Shows</option>
+                </select>
+                </div>
+            )
+
+
+        }
+
+       
         const thumbnail = this.state.data.map(thumbnail =>{
-            return <Thumbnail  title={thumbnail.tile} posterUrl={"https://image.tmdb.org/t/p/w500"+thumbnail.poster_path}  width={"250"} />
+            return <Thumbnail key={thumbnail.id}  title={thumbnail.title} alt={thumbnail.title} posterUrl={"https://image.tmdb.org/t/p/w500"+thumbnail.poster_path}  
+             width={"180"} clicked={()=>{ this.setState({movieId:thumbnail.id},()=>{this.sendMovieID()})}}/>
 
         });
 
         return(
             <div className='bulkSearchContainer'>
-      
+                
            {dropList}
            {thumbnail}
+           
+           <button  onClick={this.back}> Back </button>
+           <button onClick={this.next}> Next </button>
+           
             </div>
             );
+    }else{
+        return null;
     }
+}
 }
 
 export default BulkSearchContainer;
