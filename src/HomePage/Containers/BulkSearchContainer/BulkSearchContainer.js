@@ -52,7 +52,7 @@ componentDidMount(){
           }
   )}else if(this.props.type ==="2"){
 
-    axios.get(this.props.endpoint+this.state.trends+'/week?api_key=c839ad42a3cfdcc2a0e0e0ba427bde96')
+    axios.get(this.props.endpoint+this.state.trends+'/week?api_key=c839ad42a3cfdcc2a0e0e0ba427bde96&page='+this.state.page)
     .then( response => {
          // handle success
          this.setState({data:response.data.results})
@@ -64,12 +64,17 @@ componentDidMount(){
     }
 }
     next=()=>{
-        this.setState({page:this.state.page+1},()=>{this.componentDidMount()})
+    
+        if(this.state.trends==='movie') 
+            this.setState({page:this.state.page+1},()=>{this.componentDidMount()});
     }
 
     back=()=>{
-        if(this.state.page > 1)
-            this.setState({page:this.state.page-1},()=>{this.componentDidMount()});
+        
+        if(this.state.trends==='movie'){
+            if((this.state.page > 1))
+                this.setState({page:this.state.page-1},()=>{this.componentDidMount()});
+            }
     }
     
     render(){
@@ -79,7 +84,7 @@ componentDidMount(){
         let dropList;
           if(this.props.type==="1"){
              dropList = (
-                <div>
+                <div className='dropListContainer'>
                 <p>Genres:</p>
                 <select id="listGenre" name="genres" onChange={this.searchHandler}>
                     <option value="28" >Action</option>
@@ -101,7 +106,7 @@ componentDidMount(){
 
              dropList = (
             
-                <div>
+                <div className='dropListContainer'>
                 <p>Trending:</p>
                 <select id="listTrends" name="trends" onChange={this.searchHandler}>
                     <option value="movie" >Movies</option>
@@ -115,22 +120,27 @@ componentDidMount(){
 
        
         const thumbnail = this.state.data.map(thumbnail =>{
-            return <Thumbnail key={thumbnail.id}  title={thumbnail.title} alt={thumbnail.title} posterUrl={"https://image.tmdb.org/t/p/w500"+thumbnail.poster_path}  
-             width={"180"} clicked={()=>{ this.setState({movieId:thumbnail.id},()=>{this.sendMovieID()})}}/>
+            return <Thumbnail key={thumbnail.id} carousel={false} title={thumbnail.title} alt={thumbnail.title} posterUrl={"https://image.tmdb.org/t/p/w500"+thumbnail.poster_path}  
+             width={"250"} clicked={()=>{ this.setState({movieId:thumbnail.id},()=>{this.sendMovieID()})}}/>
 
         });
 
         return(
             <div className='bulkSearchContainer'>
+                <div className='dropList'>
+                {dropList}
+                </div>
                 
-           {dropList}
-           {thumbnail}
-           
-           <button  onClick={this.back}> Back </button>
-           <button onClick={this.next}> Next </button>
+                <div className='bulkSearch'>
+                    <div className=' btn backBtn' onClick={this.back}/>                   
+                    <div className='thumbnailList'>
+                        {thumbnail}
+                    </div>
+                    <div className='btn nextBtn' onClick={this.next}/>
+                </div>
            
             </div>
-            );
+        );
     }else{
         return null;
     }

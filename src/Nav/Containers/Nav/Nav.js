@@ -31,14 +31,16 @@ class Nav extends Component{
     render(){
         return(
 
+            <div className='NavContainer'>
+                <div className="Nav">
+                    <Logo clicked={this.refresh}/>
+                    <SearchBar className='searchBar' show={this.state.backDrop} clicked={this.backDropActive} closeBackDrop={this.backDropActive}/>
+                </div>
 
-            <div className="Nav">
-                <Logo clicked={this.refresh}/>
-                <SearchBar show={this.state.backDrop} clicked={this.backDropActive} closeBackDrop={this.backDropActive}/>
-                <div>
+                <div className="buttons">
                     <Button label="Sign In"/>
                     <Button label="Others..."/>
-                    
+
                 </div>
             </div>
 

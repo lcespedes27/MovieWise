@@ -1,30 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Yanone+Kaffeesatz:wght@700&display=swap');
+
+
 .carousel{
     width: 90%;
-    height: auto;
-    border: 1px solid black;
+    position: relative;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     margin-bottom: 10px;
     margin-left: 5%;
-    margin-top: 10px ;
-}
-
-.overview{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-    margin-left: 5%;
-    width: 90%;
-    border: 1px solid black;
-    padding-bottom: 10px;
-
+    
+    
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    transition: background-image 1s;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+              
+    
 }
 
 .summary{
-    padding-top: 20px;
-    width: 50%;
-    border: 1px solid black;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+    
 }
 
-.poster{
-    padding-top: 20px;
-    border: 1px solid black;
+.summary .title{
+    font-size: 50px;
+    font-weight: bolder;
+    color:  rgb(252,197,13);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin-bottom: 10px;
 }
+.subTitle{
+    color:rgb(252,197,13);
+   
+    font-weight: bolder;
+    align-self: start;
+    margin-right: 5px;
+    
+}
+.divOverview{
+    display: flex;
+
+}
+.genres{
+    margin-bottom: 8px;
+    align-self: flex-start;
+}
+.RDate{
+    align-self: flex-start;
+}
+.infoOverview{
+    
+    margin-top: 3px;
+    margin-bottom: 8px;
+    text-align: justify;
+}
+
+.overview{
+    background-color: rgb(0, 0, 0,0.7);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 70%;
+    padding: 15px;
+    z-index: 2500;
+
+}
+
+
+.carouselTitle{
+    margin-left: 5%;
+    background-color: rgb(0, 0, 0,0.7);
+    padding: 5px;
+    width: fit-content;
+
+    font-size: 35px;
+    font-weight: bolder;
+    color:  rgb(252,197,13);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    border-top-right-radius:15px;
+
+}
+.thumbnail{
+    position: absolute;
+    bottom: 0px;
+    background-color: rgb(0, 0, 0,0.5);
+    padding: 10px;
+    
+    margin-left: 50%;
+    
+    transform: translate(-50%);
+    
+}
+
+

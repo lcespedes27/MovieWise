@@ -1,18 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+
+}
 .searchBarContainer{
-    width: 50%;
+  position: relative;
+
+  box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
+  background: rgb(0, 0,0,0.7);
+  display: flex;
+  padding: 4px;
+  justify-content: space-between;
+  border-radius: 10px;
+  
+  
 }
 
 .searchBar{
     width: 80%;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+
 }
 
+.searchBTN{
+    width: 15%;
+    background: rgb(252,197,13);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.searchBTN:hover{
+  background:rgb(195,151,9);
+}
+
+.fas{
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 20px;
+}
+
+.summary{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
 .searchList{
 
+
+  margin-top: 10px;
   
-    margin-top: 10px;
-  max-height: 600px;
   overflow-x: visible;
   overflow-y: scroll;
 
   margin-left: 20%;
+  position: relative;
+  max-height: 500px;
+  
+  
+}
+.te{
+ 
+  position: absolute;
+  width: inherit;
+  
+  margin-top: 5px;
+  
+  
 }

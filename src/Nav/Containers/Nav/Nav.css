@@ -1,5 +1,35 @@
-.Nav{
-  display: flex;
-  border: solid 1px black;  
-  justify-content: space-between;
+*{
+  margin: 0;
+  padding: 0;
 }
+.NavContainer{
+  position: relative;
+  
+  
+  display: flex;
+
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 100%;
+  
+}
+
+.Nav{
+  
+  width: 50%;
+  
+  margin-left: 25%;
+  
+  
+  
+}
+.buttons{
+  
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  align-self: flex-start;
+  margin-left: auto;
+  
+}
+

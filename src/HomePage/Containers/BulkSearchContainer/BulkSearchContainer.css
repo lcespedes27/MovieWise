@@ -1,6 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .bulkSearchContainer{
 
     width: 80%;
     margin-left: 10%;
-    border: 1px solid black;
+    border: none;
+
+    background: rgba(0,0,0, 0.8);
+
+    border-top-right-radius: 30px;
+    margin-top: 3em;
 }
+
+.thumbnailList{
+    width: 84%;
+}
+
+.bulkSearch{
+    display: flex;
+}
+
+.btn{
+    
+    width: 8%;
+    display: flex;
+    align-items: center;
+
+    transition: opacity 0.5s;
+    opacity: 0.1;
+    
+ 
+}
+
+.btn:hover{
+    opacity: 1;
+    }
+
+.nextBtn{
+    background: url('./nextmini.png') no-repeat center
+}
+.backBtn{
+    background: url('./back.png') no-repeat center
+}
+.dropListContainer{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.dropListContainer select{
+    background: rgba(0, 0, 0,0.85);
+    margin-bottom: 1em;
+    padding: 0.5em;
+    padding-left: 1em;
+    color:rgb(252,197,13);
+    margin-top: 5px;
+    width: 20%;
+    border-color: rgb(252,197,13);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    appearance: none;
+    outline: none;
+
+    background-image: url('./nextmini.png');
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: 1.5em auto, 100%;
+
+}
+
+.dropListContainer p{
+    font-size: 3em;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin-top: 4px;
+    color: rgb(252,197,13);
+    padding-right:15px ;
+}
+
+.dropListContainer select:hover{
+    transition: background-image 0.5s;
+    background-image: url('./down.png');
+}
+
+

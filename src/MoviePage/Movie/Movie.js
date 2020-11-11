@@ -7,11 +7,13 @@ import Cast from '../Cast/Cast'
 import Crew from '../Crew/Crew'
 
 
+
 class Movie extends Component{
 
 
 
     render(){
+        let trailer = true;
         
         if((this.props.show) && (this.props.movieDetail!==null ) && (this.props.movieCastCrew !==null )){
             let cast, crew;
@@ -32,12 +34,12 @@ class Movie extends Component{
 
         
 
-
-
+                if (this.props.movieDetail.videos.results.length === 0) trailer =false;
+                console.log('aqui ----->', this.props.movieDetail)
             return(
-
+                
                 <div className='movie'>
-                    <Trailer movieTitle={this.props.movieDetail.original_title} videoKey={this.props.movieDetail.videos.results[0].key} />
+                    <Trailer movieTitle={this.props.movieDetail.original_title} videoKey={trailer ? this.props.movieDetail.videos.results[0].key : null} />
                     <Info movieInfo={this.props.movieDetail}/>
                     {castList}
                     {crewList}

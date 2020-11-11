@@ -8,7 +8,7 @@ const Thumbnail = (props)=>{
 
     return(
 
-        <img className='Thumbnail' src={props.posterUrl} alt={props.title} title={props.title} width={props.width} onClick={props.clicked}/>
+        <img className={props.carousel ? 'Thumbnail' : 'BulkSearch'}  src={props.posterUrl} alt={props.title} title={props.title} width={props.width} onClick={props.clicked}/>
 
     );
 

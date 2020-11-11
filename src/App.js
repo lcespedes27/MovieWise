@@ -62,7 +62,7 @@ class App extends Component {
        
         <Nav clicked={this.getData}/>
         
-        <Carousel show={this.state.homePage} endpoint={'https://api.themoviedb.org/3/discover/movie?api_key=c839ad42a3cfdcc2a0e0e0ba427bde96&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres='}/>
+        <Carousel show={this.state.homePage} />
 
 
         <BulkSearchContainer show={this.state.homePage} type={"1"} endpoint={'https://api.themoviedb.org/3/discover/movie?api_key=c839ad42a3cfdcc2a0e0e0ba427bde96&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres='}

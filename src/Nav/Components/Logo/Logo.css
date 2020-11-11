@@ -1,3 +1,9 @@
 .Logo{
-    height: 100px;
+    height: 90%;
+    
+}
+
+.logoIMG{
+    width: 65%;
+    cursor: pointer;
 }
