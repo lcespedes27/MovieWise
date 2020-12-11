@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.generalInfo{
+    display: flex;
+   justify-content: center;
+   
+}
+
+.rating{
+    margin-top:15px ;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vh;
+    color: whitesmoke;
+    font-weight: bolder;
+    
+}
+
+.rating span{
+    font-weight: bolder;
+    
+    color:rgb(252,197,13);
+    font-size: 5vh;
+    margin-right: 15px;
+    
+}
+.infoTitle{
+    color:rgb(252,197,13);
+    font-size: 4.5vh;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+.star{
+    width: 8vw;
+}
+
+.infoPoster{
+    width: 20%;
+  
+}
+.infoText{
+    border-top-right-radius: 30px;
+    width: 40%;
+    display: flex;
+    flex-direction: column; 
+    text-align: left;
+    background-color: rgb(0, 0, 0,0.5);
+    padding-right: 20px;
+    padding-left: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+span{
+    color:rgb(252,197,13);
+    font-weight: bolder;
+    font-size: 2.8vh;
+    text-align: center;
+ 
+   
+}
+
+.infoSubText{
+    color: whitesmoke;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+
+.infoOverviewMovie{
+    
+    text-align: justify;
+    color: whitesmoke;
+    font-size: 2vh;
+    font-weight: bold;
+    padding-left: 10px;
+
+}
+
+.infoOverviewDiv{
+    display: flex;
+    
+}
+
+.infoText p {
+    margin-bottom: 10px;
+}
+
+.general{
+    margin-bottom: 50px;
+}
+
+@media (max-width: 600px){
+    .rating{
+        margin-top:5px ;
+        margin-bottom: 5px;
+        font-size: 3vh;
+    }
+    .rating span{
+
+        font-size: 1.5em;
+        margin-right: 15px;
+
+        
+    }
+    .infoPoster{
+        display: none;
+      
+    }
+
+    .infoText{
+        border-top-right-radius: 30px;
+        width: 90%;
+        background-color: rgb(0, 0, 0,0.8);
+        padding-right: 10px;
+        padding-left: 10px;
+       
+
+        
+    }
+    .infoText p {
+        margin-bottom: 5px;
+    }
+    
+}

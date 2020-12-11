@@ -1,7 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Yanone+Kaffeesatz:wght@700&display=swap');
+
 .trailerFrame{
-    height: 500px;
+    height: 82vh;
+  
+    display: flex;
+    flex-direction: column;
 }
 .trailer{
-    width: 80%;
+    width: 95%;
+    margin-left: 2.5%;
     height: 100%;
 }
+.movieTitle{
+    font-weight: bolder;
+    font-size: 7em;
+    color:  rgb(252,197,13);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    
+}
+
+@media (max-width: 600px){
+    .movieTitle{
+        font-weight: bolder;
+        font-size: 2.5em;
+        color:  rgb(252,197,13);
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        
+    }
+
+    .trailer{
+        width: 100%;
+        margin-left: 0px;
+        height: 100%;
+    }
+    
+.trailerFrame{
+    height: 55vh;
+  
+    display: flex;
+    flex-direction: column;
+}
+    }

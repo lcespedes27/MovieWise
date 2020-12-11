@@ -12,25 +12,28 @@
     margin-bottom: 5px;
     width: 80%;
     cursor: pointer;
-    justify-content: space-around;
+    justify-content: center;
     border-top-right-radius: 30px;
+    
     
 
 }
 
 
 .itemsPoster{
-    width: 30%;
+    width: 20%;
+    height: 100%;
     border-radius: 10%;
    
 }
 .info{
     width: 60%;
     background: rgba(0,0,0,0.2);
-    height: 50%;
+    height: 40%;
     border-top-right-radius: 20px;
     padding: 10px;
-    margin-top: 3em;
+    
+    align-self: center;
 
 }
 .info:hover{
@@ -44,11 +47,7 @@
     
 }
 
-.star{
-    margin-left: 15px;
-    width: 3em;
-     
-}
+
 .Ratings{
     font-weight: bolder;
     color: rgb(195,151,9);
@@ -62,11 +61,76 @@
 
 span{
     color:  rgb(252,197,13);
-    font-size: 1.3em;
+    font-size: 1.5em;
     margin-left: 5px;
 }
 .Rdiv{
     display: flex;
-   
+    
     justify-content: center;
+   
 }
+
+.star{
+    background-image: url('../SearchItems/star.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    margin-left: 15px;
+    flex-basis: 4em;
+    height: 4em;
+    background-size: contain;
+     
+}
+
+
+@media (max-width: 600px){
+
+    .itemsPoster{
+        width: 40%;
+        border-radius: 10%;
+        align-self: center;
+       
+    }
+          
+    .info .title{
+        color:  rgb(252,197,13);
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 1.2em;
+        
+        margin-bottom: 0px;
+        
+    }
+
+    .info .date{
+        color: rgb(195,151,9);
+        margin-top: 0px;
+        font-weight: bolder;
+        font-size: 0.9em;
+       
+     }
+
+     
+.Ratings{
+    font-weight: bolder;
+    color: rgb(195,151,9);
+    margin-top: 0px;
+    font-size: 0.9em;
+}
+
+.info{
+    
+    height: fit-content; 
+    padding: 5px;
+}
+
+.star{
+ 
+    
+    margin-left: 2px;
+    flex-basis: 4em;
+    height: 4em;
+  
+     
+}
+    }

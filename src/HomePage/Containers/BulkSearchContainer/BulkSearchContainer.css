@@ -13,10 +13,11 @@
 
     border-top-right-radius: 30px;
     margin-top: 3em;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .thumbnailList{
-    width: 84%;
+    width: 80%;
 }
 
 .bulkSearch{
@@ -88,3 +89,46 @@
 }
 
 
+/*media Queries for responsive design*/
+
+@media (max-width: 600px){
+    .bulkSearchContainer{
+        margin-left: 0px;
+        width: 100%;
+        background: rgba(0,0,0, 0.6);
+    }
+    .dropListContainer p{
+        font-size: 2em;
+        margin-left: 0px;
+        padding-right:5px;
+    }
+
+    .dropListContainer{
+        justify-content: left;
+        margin-left: 5px;
+        
+    }
+
+    .dropListContainer select{
+       
+        margin-bottom: 1em;
+        padding: 0.5em;
+        padding-left: 0.5em;
+        margin-top: 5px;
+        width: 75%;
+        font-size: 1em;
+
+}
+
+.btn{
+    
+    width: 10%;
+    display: flex;
+    align-items: center;
+    background-size: contain;
+    transition: opacity 0.5s;
+    opacity: 0.1;
+    
+ 
+}
+  }

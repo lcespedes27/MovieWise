@@ -75,7 +75,7 @@ class Carousel extends Component{
                    }
                 }
                 
-                setInterval(this.timer,10000)
+                setInterval(this.timer,8000)
                 // handle success
                 this.setState({data:holder})
                 this.setState({poster:"https://image.tmdb.org/t/p/original"+this.state.data[0].backdrop_path,title:this.state.data[0].title,
@@ -109,7 +109,7 @@ class Carousel extends Component{
 
         });
 
-        console.log("redering.....")
+        
         let image ={
             
             

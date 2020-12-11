@@ -4,6 +4,17 @@
 }
 
 .logoIMG{
-    width: 65%;
+    width: 70%;
     cursor: pointer;
 }
+
+/*media Queries for responsive design*/
+
+@media (max-width: 600px){
+
+  
+    .logoIMG{
+        width: 85%;
+        cursor: pointer;
+    }
+  }

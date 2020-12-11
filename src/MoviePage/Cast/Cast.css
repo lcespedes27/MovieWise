@@ -1,0 +1,63 @@
+.cast, .crew{
+
+    display: flex;
+    justify-content: space-around;
+    width: fit-content;
+    margin: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+
+    height: inherit;
+    box-shadow: 0 5px 25px rgba(252,197,13,0.7);
+
+    pointer-events: none;
+}
+
+
+
+
+
+.actor{
+    width: 8vw;
+    border-radius: 80px;
+}
+
+.castInfo{
+    align-self: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 25px;
+    background: rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+    border-top-right-radius: 15px;
+    height: inherit;
+}
+
+.crewInfo{
+    align-self: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+    border-top-right-radius: 15px;
+    height: inherit;
+}
+
+@media (max-width: 600px){
+    .cast, .crew{
+        width: 90%;
+        margin: 10px;
+        overflow: hidden;
+        
+    }
+
+    .castInfo{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .actor{
+        width: 25vw;
+        border-radius: 80px;
+    }
+}

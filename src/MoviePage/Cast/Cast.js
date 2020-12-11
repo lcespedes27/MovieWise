@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Cast.css"
 
 
 
@@ -8,12 +9,12 @@ const Cast = (props)=>{
 
     return(
 
-        <div>
+        <div className="cast">
             <div>
-                <img alt="Actor" src={props.castImage}/>
+                <img className="actor" alt="Actor" src={props.castImage}/>
             </div>
 
-            <div>
+            <div className='castInfo'>
                 <p>{props.castName}</p>
                 <span>As: </span>
                 <p>{props.castCharacter}</p>

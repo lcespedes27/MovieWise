@@ -8,7 +8,7 @@ const Logo = (props)=>{
 
     return(
         <div className ="Logo">
-        <img className='logoIMG' src={logo} alt="Movie Wise" onClick={props.clicked}/>
+            <img className='logoIMG' src={logo} alt="Movie Wise" onClick={props.clicked}/>
         </div>
     );
 

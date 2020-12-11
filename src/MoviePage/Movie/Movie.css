@@ -1,5 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Yanone+Kaffeesatz:wght@700&display=swap');
 .movie{
     width: 90%;
     margin-left: 5%;
-    border: solid 1px black;
+    height: 100%;
+}
+
+.castList, .crewList{
+    
+    display: flex;
+    opacity: 0;
+    height: 0;
+   width: 90%;
+   margin-left: 5%;
+    flex-wrap: wrap;
+    background: rgba(0,0,0,0.7);
+    margin-bottom: 30px;
+
+    
+    transition-property: opacity;
+    transition-duration: 3s ;
+    
+    
+ 
+
+    overflow: hidden;
+   
+}
+
+
+
+.crewListButton, .castListButton{
+    
+        display: flex;
+        background-color: rgb(0, 0, 0,0.7);
+        padding: 5px;
+        width: 15%;
+        justify-content: center;
+        margin-left: 5%;
+        font-size: 3em;
+        font-weight: bolder;
+        color:  rgb(252,197,13);
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        border-top-right-radius:15px;
+        border-bottom: 1px solid rgb(252,197,13);;
+    
+    
+}
+
+.icon{
+    
+    background-image: url('../../HomePage/Containers/BulkSearchContainer/nextmini.png');
+    height: 0.8em;
+    width: 0.8em;
+
+    background-repeat: no-repeat, repeat;
+    
+    background-size:   100%;
+    margin-left: 15px;
+    margin-top: 5px;
+  
+}
+
+ .castListButton:hover  .icon{
+    
+    background-image: url('../../HomePage/Containers/BulkSearchContainer/down.png');
+
+  
+}
+
+.crewListButton:hover  .icon{
+    
+    background-image: url('../../HomePage/Containers/BulkSearchContainer/down.png');
+
+  
+}
+
+@media (max-width: 600px){
+    .movie{
+        width: 100%;
+        margin-left: 0px;
+        height: 100%;
+    }
+
+    .crewListButton, .castListButton{
+        font-size: 1.5em;
+        width: 20%;
+    }
+    
+    
 }

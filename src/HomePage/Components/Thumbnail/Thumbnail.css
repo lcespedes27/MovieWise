@@ -22,3 +22,20 @@
     opacity: 0.5;
     cursor: pointer;
 }
+
+
+/*media Queries for responsive design*/
+
+@media (max-width: 600px){
+    img{
+        width: 130px;
+        
+    }
+}
+
+@media (max-width: 370px){
+    img{
+        width: 100px;
+    }
+
+    }

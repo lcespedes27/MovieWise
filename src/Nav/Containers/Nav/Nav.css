@@ -19,7 +19,7 @@
   width: 50%;
   
   margin-left: 25%;
-  
+ 
   
   
 }
@@ -33,3 +33,16 @@
   
 }
 
+/*media Queries for responsive design*/
+
+@media (max-width: 600px){
+  .buttons{
+    display: none;
+  }
+
+  .Nav{
+    width: 100%;
+    margin-left: 0px;
+   
+  }
+}

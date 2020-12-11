@@ -1,20 +1,21 @@
-import React from 'react';
+import React from 'react'
+import '../Cast/Cast.css'
 
 
 
-const Cast = (props)=>{
+const Crew = (props)=>{
     
    
 
     return(
 
-        <div>
-            <hr/>
+        <div className="crew">
+           
             <div>
-                <img alt="Actor" src={props.crewImage}/>
+                <img className="actor" alt="Actor" src={props.crewImage}/>
             </div>
 
-            <div>
+            <div className='crewInfo'>
                 <p>{props.crewName}</p>
                 <span>Job: </span>
                 <p>{props.crewJob}</p>
@@ -24,4 +25,4 @@ const Cast = (props)=>{
         </div>
     );
 }
-export default Cast;
+export default Crew;

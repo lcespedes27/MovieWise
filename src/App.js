@@ -56,11 +56,11 @@ class App extends Component {
 
   
   render(){
-
+   
     return (
       <div className="App">
        
-        <Nav clicked={this.getData}/>
+        <Nav className="nav" clicked={this.getData}/>
         
         <Carousel show={this.state.homePage} />
 
@@ -72,7 +72,30 @@ class App extends Component {
                               clicked= {this.getData }/>
         
         <Movie  show ={this.state.moviePage} movieDetail={this.state.movieDetail} movieCastCrew={this.state.movieCastCrew}/>
-        
+        <div className="footer"> 
+          <div className="members">
+            <span>Team Members</span>  
+            
+              <p>Luis Joan Cespedes</p>
+              <p>Samantha Louise Saldua</p>
+            
+          </div>
+          <div className="Technologies"> 
+            <span>Technologies</span> 
+            <p>ReactJS</p>
+            <p>ECMAScript 6</p>
+            <p>HTML</p>
+            <p>CSS</p>
+
+          </div>
+          <div className="credits">
+            <span>Credits</span>  
+            <a href="https://www.themoviedb.org/"><p>The Movie Database API</p></a>
+            
+            <p>Thanks to the information provided by this API we could do our project </p>
+            <a href="https://developers.themoviedb.org/3/getting-started/introduction"><p>API Tutorial</p></a>
+           </div>
+        </div>
       </div>
     );
   }

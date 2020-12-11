@@ -1,6 +1,6 @@
 import React from 'react';
 import './SearchItems.css';
-import Star from './star.png';
+
 
 
 const SearchItems = (props)=>{
@@ -19,7 +19,7 @@ const SearchItems = (props)=>{
                     <p className='date'>{props.releaseDate}</p>
                     <div className='Rdiv'>
                       <p className='Ratings'> Rating: <span>{props.average}/10</span></p> 
-                      <img className='star' alt ='star' src={Star}/>
+                      <div className='star'/>
                     </div>
                 
                 </div>

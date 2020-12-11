@@ -24,6 +24,7 @@
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
+    font-size: 1.6em;
     
     
     
@@ -81,7 +82,7 @@
     padding: 5px;
     width: fit-content;
 
-    font-size: 35px;
+    font-size: 4em;
     font-weight: bolder;
     color:  rgb(252,197,13);
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -101,3 +102,43 @@
 }
 
 
+.subTitle span{
+    font-size: 200px;
+}
+
+
+@media (max-width: 600px){
+
+    .carousel{
+        width: 100%;
+        margin-left: 0px;
+        height: 30vh;
+          
+    }
+
+    .carouselTitle{
+        margin-left: 0px;
+        padding: 2px;
+        font-size: 1.5em;
+        border: 1px solid rgb(252,197,13);
+        border-bottom-color: black;
+    }
+
+    .thumbnail,.divOverview, .genres{
+        display: none;
+    }
+    .overview{
+        padding: 5px;
+        margin-left: 50%;
+    }
+    .summary{
+        font-size: 0.8em;
+    }
+    .summary .title{
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+    .subTitle{
+        font-size: 1.5em;
+    }
+  }

@@ -17,16 +17,19 @@
   padding: 4px;
   justify-content: space-between;
   border-radius: 10px;
+ 
   
   
 }
 
 .searchBar{
     width: 80%;
+    font-size: 1em;
     padding: 5px 15px;
     border: none;
     border-radius: 10px;
     font-weight: bold;
+    
 
 }
 
@@ -76,4 +79,25 @@
   margin-top: 5px;
   
   
+}
+
+/*media Queries for responsive design*/
+
+@media (max-width: 600px){
+  .searchBarContainer{
+      margin-left: 0px;
+      box-shadow:  3px 3px 3px rgba(252,197,13,0.7);
+      border: solid 1px  rgba(252,197,13,0.7);
+  }
+  .te{
+    width: 100%;
+  }
+
+  .searchBar{
+    
+    font-size: 0.8em;
+    
+    
+
+}
 }

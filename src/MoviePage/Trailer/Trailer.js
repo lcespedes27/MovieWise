@@ -13,7 +13,7 @@ const Trailer = (props)=>{
 
     return(
         <div className='trailerFrame'>
-            {props.movieTitle}
+           <span className='movieTitle'> {props.movieTitle}</span>
             <iframe className='trailer' title="YouTube" src={"https://www.youtube.com/embed/"+ props.videoKey}/> 
          
         </div>
